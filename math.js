@@ -45,6 +45,19 @@ function calcularAlturaTriangulo(lado1, base){
   }
 }
 
+function calcularAlturaTrianguloEscaleno(a, b, c) {
+  const Semiperimetro = (a + b + c ) /2 ;
+
+  if (a == b || a == c || b == c) {
+      console.warn('Este no es un triangulo escaleno.')
+  }
+  else {
+      H = ((2/a) * (Math.sqrt(Semiperimetro * (Semiperimetro - a) *(Semiperimetro - b) * (Semiperimetro - c))));
+      console.log('La altura "H" = ' + H) ;
+  }
+}
+
+
 console.log({
   ladoTriangulo1,
   ladoTriangulo2,
